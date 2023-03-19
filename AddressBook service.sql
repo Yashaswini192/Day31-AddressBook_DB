@@ -12,6 +12,7 @@ create table AddressBook(
                         email text not null
                         );
 select * from addressbook;
+
 insert into AddressBook(firstname,secondname,Address,city,state,zip,phoneNumber,email) 
      values("Anjali","Kota","29-56/456","Hyderabad","Telangana",500056,9666324598,"anju@gmail.com");
 insert into AddressBook(firstname,secondname,Address,city,state,zip,phoneNumber,email) 
@@ -23,4 +24,9 @@ insert into AddressBook(firstname,secondname,Address,city,state,zip,phoneNumber,
 insert into AddressBook(firstname,secondname,Address,city,state,zip,phoneNumber,email) 
 values("Akhila","koti","45/A-356","vizag","AndhraPradesh",200031,9879785647,"akhila26@gmail.com");
 
+update AddressBook set zip=200345 where firstname="Akhila";
+update AddressBook set email="anjali456@gmail.com" where firstname="Anjali";
+update AddressBook set city ="Daegu" where firstname="Jimin";
+update AddressBook set phoneNumber=9441109754 where firstname="Taehyung";
+update AddressBook set Address="26-48E/567" where secondname="macherla";
 	
