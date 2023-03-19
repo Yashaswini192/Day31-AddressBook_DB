@@ -30,3 +30,5 @@ update AddressBook set city ="Daegu" where firstname="Jimin";
 update AddressBook set phoneNumber=9441109754 where firstname="Taehyung";
 update AddressBook set Address="26-48E/567" where secondname="macherla";
 	
+delete from AddressBook where firstname="Akhila";
+delete from AddressBook where secondname="Kota";
