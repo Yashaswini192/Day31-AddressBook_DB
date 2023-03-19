@@ -60,3 +60,8 @@ where ABtype="Friends";
 
 select count(ABtype) from AddressBook where ABtype="Family";
 select count(ABtype) from AddressBook where ABtype="Friends";
+
+insert into AddressBook(firstname,secondname,Address,city,state,zip,phoneNumber,email,ABtype)
+ values("Anjali","Kota","29-56/456","Hyderabad","Telangana",500056,9666324598,"anju@gmail.com","Family");
+ insert into AddressBook(firstname,secondname,Address,city,state,zip,phoneNumber,email,ABtype)
+ values("Kshirja","khan","67-5677","Solapur","Maharashtra",600078,8675863425,"kshirja@gmail.com","Friends");
