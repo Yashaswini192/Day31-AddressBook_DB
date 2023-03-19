@@ -42,3 +42,8 @@ select count(city) from AddressBook
 where city in(select city from AddressBook group by city);
 select count(state) from AddressBook 
 where state in(select state from AddressBook group by state);
+
+select firstname,secondname,Address,city,state,zip,phoneNumber,email from AddressBook
+where city="vizag"  order by firstname ASC;
+select firstname,secondname,Address,city,state,zip,phoneNumber,email from AddressBook
+where city="Hyderabad"  order by firstname ASC;
