@@ -57,3 +57,6 @@ select firstname,secondname,Address,city,state,zip,phoneNumber,email,ABtype from
 where ABtype="Family";
 select firstname,secondname,Address,city,state,zip,phoneNumber,email,ABtype from AddressBook
 where ABtype="Friends";
+
+select count(ABtype) from AddressBook where ABtype="Family";
+select count(ABtype) from AddressBook where ABtype="Friends";
