@@ -47,3 +47,13 @@ select firstname,secondname,Address,city,state,zip,phoneNumber,email from Addres
 where city="vizag"  order by firstname ASC;
 select firstname,secondname,Address,city,state,zip,phoneNumber,email from AddressBook
 where city="Hyderabad"  order by firstname ASC;
+
+alter table AddressBook add ABtype varchar(50) not null;
+update AddressBook set ABtype ="Family" where firstname="Akhila";
+update AddressBook set ABtype="Friends" where firstname="Jimin";
+update AddressBook set ABtype ="Family" where firstname="Sandhya";
+update AddressBook set ABtype="Friends" where firstname="Taehyung";
+select firstname,secondname,Address,city,state,zip,phoneNumber,email,ABtype from AddressBook
+where ABtype="Family";
+select firstname,secondname,Address,city,state,zip,phoneNumber,email,ABtype from AddressBook
+where ABtype="Friends";
