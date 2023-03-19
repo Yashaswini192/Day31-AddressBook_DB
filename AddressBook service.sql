@@ -106,5 +106,10 @@ insert into contact_address(id,address,city,state) values(2,"56-45/456","Busan",
 														(3,"56/675","New delhi","Delhi"),
                                                         (4,"56-387","Banglore","karnataka"),
                                                         (5,"34-4565","solapur","Maharashtra");
-                                                        
-                                                        
+                
+select * from contact_address where city="Vizag";
+select count(city) from contact_address ;
+select count(state) from contact_address ;
+select count(id) from book_type where contacttype_id=1;
+select count(id) from book_type where contacttype_id=2;
+select count(id) from book_type where contacttype_id=3;
