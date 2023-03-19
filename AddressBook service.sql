@@ -37,3 +37,8 @@ select firstname,secondname,Address,city,state,zip,phoneNumber,email from Addres
   where city in(select city from AddressBook  group by city having count(*) >1);
 select firstname,secondname,Address,city,state,zip,phoneNumber,email from AddressBook 
 where state in(select state from AddressBook group by state having count(*) >1);
+
+select count(city) from AddressBook
+where city in(select city from AddressBook group by city);
+select count(state) from AddressBook 
+where state in(select state from AddressBook group by state);
