@@ -65,3 +65,46 @@ insert into AddressBook(firstname,secondname,Address,city,state,zip,phoneNumber,
  values("Anjali","Kota","29-56/456","Hyderabad","Telangana",500056,9666324598,"anju@gmail.com","Family");
  insert into AddressBook(firstname,secondname,Address,city,state,zip,phoneNumber,email,ABtype)
  values("Kshirja","khan","67-5677","Solapur","Maharashtra",600078,8675863425,"kshirja@gmail.com","Friends");
+ 
+ create table personal_details(
+							id int not null primary key auto_increment,
+                            firstname varchar(30),
+                            secondname varchar(50) not null,
+                            phoneNumber Long not null ,
+                            email text(100) not null
+                            );
+insert into personal_details(firstname,secondname,phoneNumber,email)
+values("Sam","rao",9586746547,"sam@gmail.com"),
+("Riya","thakur",7869586324,"riya12@gmail.com"),
+("Abhi","roy",7563425367,"abhi56@gmail.com"),
+("Jin","soek",7586947543,"jin@gmail.com"),
+("Ayra","singh",6574857445,"ayra@gmail.com");
+select * from personal_details;
+ create table choose_type(
+				contacttype_id int primary key not null,
+                contact_type varchar(20)
+                );
+insert into choose_type(contacttype_id,contact_type) values(1,"Family"),(2,"Friends"),(3,"Profession");
+select * from choose_type;
+create table book_type(
+						id int,
+                        contacttype_id int,
+                        foreign key(id) references personal_details(id),
+                        foreign key(contacttype_id) references choose_type(contacttype_id)
+                        );
+insert into book_type(id,contacttype_id) values(1,1),(2,3),(3,1),(4,2),(5,3);
+
+create table contact_address(
+							id int not null,
+                            address varchar(20),
+                            city varchar(20),
+                            state varchar(20),
+                             foreign key(id) references personal_details(id)
+                             );
+insert into contact_address(id,address,city,state) values(1,"46-4758","Vizag","AP");
+insert into contact_address(id,address,city,state) values(2,"56-45/456","Busan","Seoul"),
+														(3,"56/675","New delhi","Delhi"),
+                                                        (4,"56-387","Banglore","karnataka"),
+                                                        (5,"34-4565","solapur","Maharashtra");
+                                                        
+                                                        
