@@ -32,3 +32,8 @@ update AddressBook set Address="26-48E/567" where secondname="macherla";
 	
 delete from AddressBook where firstname="Akhila";
 delete from AddressBook where secondname="Kota";
+
+select firstname,secondname,Address,city,state,zip,phoneNumber,email from AddressBook 
+  where city in(select city from AddressBook  group by city having count(*) >1);
+select firstname,secondname,Address,city,state,zip,phoneNumber,email from AddressBook 
+where state in(select state from AddressBook group by state having count(*) >1);
